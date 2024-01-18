@@ -66,7 +66,15 @@ To improve your editing experience, you can generate a definition file
 php artisan lighthouse:ide-helper
 ```
 
-For Phpstorm, we recommend [the GraphQL plugin](https://plugins.jetbrains.com/plugin/8097-graphql).
+For Phpstorm, we recommend [the GraphQL plugin](https://plugins.jetbrains.com/plugin/8097-graphql). And you should add `graphql.config.yml` file containing the following configuration
+
+```yml
+schema:
+  - graphql/**/*.graphql
+  - schema-directives.graphql
+documents: 'graphql/**/*.graphql'
+
+```
 
 ## Install GraphQL DevTools
 
